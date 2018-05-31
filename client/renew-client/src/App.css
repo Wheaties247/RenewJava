@@ -1,0 +1,326 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}*/
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.holdsEntireApp{
+  padding: 4px;
+  background: rgb(75, 175, 175);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    background: url('./images/senicBike.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.signUpComponent{
+ text-align: center;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+  border-radius: 15px;
+}
+.logInComponent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  /*border: 5px solid rgb(63, 63, 125);*/
+  /*background: lightgreen;*/
+  padding-bottom: 30px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+
+}
+.nav{
+  display: flex;
+  justify-content: space-around;
+  /*border: 5px solid rgb(63, 63, 125);*/
+  border-radius: 5px;
+  margin-top: 1vh;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  margin-bottom: 1vw;
+  width: 98vw;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+  
+}
+.nav h1{
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.nav h1:hover{
+  text-decoration: underline;
+}
+.homePage{
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  height: 100%;
+  width: 99vw;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+}
+.animation{
+  opacity: 0;
+  animation: fadeSaying;
+  animation-delay: 1.5s;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  z-index: 4;
+}
+.wheel{
+  position: absolute;
+  bottom: 30vh;
+  left: 38vw;
+  animation-iteration-count: 1;
+  animation-duration: 5.5s;
+  /*transform: scale(2.5);*/
+  animation:App-logo-spin infinite 10s linear;
+  z-index: 0;
+  transform: scale(2.5);
+}
+.siteName{
+  position:relative;
+  bottom: 12vh;
+  opacity: 1;
+  animation: showName;
+  z-index: 5;
+  animation-iteration-count: 1;
+  animation-duration: 5.5s;
+}
+
+@keyframes showName{
+  0%{
+    opacity: 0;
+  }
+  85%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fadeSaying {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.posts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 4px solid black;
+  background :rgba(255, 255, 255, .6);
+  border-radius: 10px;
+  width: 70vw;
+  height: 40vh;
+  overflow-y: scroll;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.postForm label{
+  text-align: center;
+  width: 50vw;
+}
+.userPost{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  border: 2px solid black;
+  width: 23%;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: .3s;
+  height:250px;
+}
+.userPost:hover {
+  background: white;
+  box-shadow: 5px 5px 20px black;
+  color: black;
+  text-shadow: none;
+}
+.modal{
+  display: fixed;
+  position: absolute;
+  z-index: 5;
+  background: rgba(0, 0, 0, .7);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile{
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile h1{
+  font-size: 40px;
+  
+}
+
+.createPost{
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+}
+
+
+.createPost:hover{
+  text-decoration: underline;
+}
+
+.editPlaque{
+  border: 2px solid black;
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*height: 204px;*/
+  margin-top: 5px;
+  border-radius: 5px;
+  
+}
+.editForm{
+  /*height: 180px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.editForm input{
+  padding: 0;
+  margin:1px;
+}
+.postContainer{
+  border: 3px solid black;
+  padding:20px;
+  height: 60vh;
+  width: 60vw;
+  background: rgba(255, 255, 255, .6);
+  overflow-y: scroll;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.allPosts{
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+
+}
+
+.allPost{
+  background: rgba(0,0,0,.6);
+  border: 2px solid black;
+  text-align: center;
+  padding:10px;
+  margin:15px;
+  border-radius: 10px;
+  width: 85%;
+}
+.allPost h2{
+  margin:0;
+}
+.memberQuery:hover{
+ text-decoration: underline; 
+}
+.x{
+  position: relative;
+  font-size: 15px;
+  margin-top: -165px;
+  margin-left: 5px;
+  border: 2px solid black;
+  padding: 8px 10px 8px 10px;
+  border-radius: 20px;
+  transition: .3s;
+  color: black;
+ }
+ .x:hover{
+  background: black;
+  color: white;
+ }
+form{
+  color:rgb(255, 255, 255);
+  text-align: center;
+  /*background: rgba(12, 55, 106, .6);*/
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border: 5px solid rgba(0, 0, 0, .4);*/
+  padding-top: 30px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
+}
+form label{
+  font-size: 22px;
+}
+form input[type=text], form input[type=password]{
+  background: transparent;
+  font-size: 20px;
+  border: 0 solid transparent;
+  border-bottom: 2px solid black;
+  width: 65%;
+  margin-bottom: 10px;
+  color: white;
+}
+form input[type=text]:focus, form input[type=pass]:focus{
+  text-align: center;
+  background: transparent;
+  border: 0 solid transparent;
+  border-bottom: 1px solid rgb(75, 175, 214);
+  outline: none;
+  height: 20px;
+  width: 65%;
+  color: white;
+}
+
+input[type=submit], input[type=button]{
+  width: 88px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-right: 10px;
+}
+

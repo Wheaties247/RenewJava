@@ -8,30 +8,40 @@ import javax.persistence.*;
 @Entity @Table(name = "POSTS")
 public class Post {
 
-    public Post(String part, String retailPrice, String partAge, Long userId) {
+    public Post(String part, String retailPrice, String partAge) {
         this.part = part;
         this.retailPrice = retailPrice;
         this.partAge = partAge;
-        this.userId = userId;
+        //this.clientId = clientId;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "part")
+    @Column(name = "PART")
     private String part;
 
-    @Column(name = "retail_price")
+    @Column(name = "RETAILPRICE")
     private String retailPrice;
 
-    @Column(name = "part_age")
+    @Column(name = "PARTAGE")
     private String partAge;
 
-    @Column(name = "user_Id")
-    private Long userId;
+//    @Column(name = "clientId")
+//    private int clientId;
 
-    @OneToOne (mappedBy = "post")
-    User user;
+//    @OneToOne (mappedBy = "post")
+//    User user;
+
+//    public String getPart(){
+//        return part;
+//    }
+//    public String getRetailPrice(){
+//        return  retailPrice;
+//    }
+//    public String getPartAge(){
+//        return partAge;
+//    }
 
 }

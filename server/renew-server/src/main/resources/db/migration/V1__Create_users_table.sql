@@ -1,6 +1,6 @@
 create table USERS (
-    ID serial UNIQUE,
-    user_name varchar(100) NOT NULL,
-    password varchar(100) NOT NULL
+    ID serial UNIQUE PRIMARY KEY,
+    USERNAME varchar(100) NOT NULL,
+    PASSWORD varchar(100) NOT NULL
 );
 
